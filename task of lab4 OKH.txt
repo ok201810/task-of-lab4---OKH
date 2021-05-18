@@ -1,0 +1,80 @@
+	((((((((  MULTIPLAY TWO MATRIX BY java  )))))))) 
+
+public class MatrixMultiplicationExample{  
+public static void main(String args[]){  
+//creating two matrices    
+int x[][]={{2,2,2},{3,3,3},{5,5,5}};    
+int y[][]={{1,1,1},{3,3,3},{5,5,5}};    
+    
+//creating another matrix to store the multiplication of two matrices    
+int z[][]=new int[3][3];  //3 rows and 3 columns  
+    
+//multiplying and printing multiplication of 2 matrices    
+for(int i=0;i<3;i++){    
+for(int j=0;j<3;j++){    
+z[i][j]=0;      
+for(int k=0;k<3;k++)      
+{      
+z[i][j]+=x[i][k]*y[k][j];      
+}//end of k loop  
+System.out.print(z[i][j]+" ");  //printing matrix element  
+}//end of j loop  
+System.out.println();//new line    
+}    
+}
+}
+
+
+*************************************************
+
+
+	((((((((  MULTIPLAY TWO MATRIX BY C  )))))))) 
+#include<stdio.h>    
+#include<stdlib.h>  
+int main(){  
+int x[10][10],y[10][10],multi[10][10],row,col,i,j,k;    
+system("cls");  
+printf("enter the number of row=");    
+scanf("%d",&row);    
+printf("enter the number of column=");    
+scanf("%d",&col);    
+printf("enter the first matrix element=\n");    
+for(i=0;i<row;i++)    
+{    
+for(j=0;j<col;j++)    
+{    
+scanf("%d",&x[i][j]);    
+}    
+}    
+printf("enter the second matrix element=\n");    
+for(i=0;i<row;i++)    
+{    
+for(j=0;j<col;j++)    
+{    
+scanf("%d",&y[i][j]);    
+}    
+}    
+    
+printf("multiply of the matrix=\n");    
+for(i=0;i<row;i++)    
+{    
+for(j=0;j<col;j++)    
+{    
+multi[i][j]=0;    
+for(k=0;k<c;k++)    
+{    
+multi[i][j]+=x[i][k]*y[k][j];    
+}    
+}    
+}    
+//for printing result    
+for(i=0;i<row;i++)    
+{    
+for(j=0;j<col;j++)    
+{    
+printf("%d\t",multi[i][j]);    
+}    
+printf("\n");    
+}    
+return 0;  
+}  
